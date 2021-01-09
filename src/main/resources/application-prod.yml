@@ -8,9 +8,9 @@ spring:
     password: kf123
     druid:
       db-type: MYSQL
-#  devtools:
-#    reatart:
-#      enabled: false
+  devtools:
+    livereload:
+      enabled: false
 # mybatisPplus配置
 mybatis-plus:
   configuration:
