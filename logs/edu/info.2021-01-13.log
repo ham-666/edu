@@ -1,0 +1,166 @@
+2021-01-13 20:26:29.207 - Starting EduApp on ham with PID 2988 (E:\myproject\java\idea\idea01\edu\target\classes started by ham in E:\myproject\java\idea\idea01\edu)
+2021-01-13 20:26:29.212 - The following profiles are active: dev
+2021-01-13 20:26:29.279 - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-01-13 20:26:29.279 - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-01-13 20:26:30.409 - No MyBatis mapper was found in '[com.edu.mapper]' package. Please check your configuration.
+2021-01-13 20:26:30.612 - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-01-13 20:26:30.870 - UT026010: Buffer pool was not set on WebSocketDeploymentInfo, the default pool will be used
+2021-01-13 20:26:30.904 - Initializing Spring embedded WebApplicationContext
+2021-01-13 20:26:30.904 - Root WebApplicationContext: initialization completed in 1625 ms
+2021-01-13 20:26:31.043 - Init DruidDataSource
+2021-01-13 20:26:31.179 - {dataSource-1} inited
+2021-01-13 20:26:31.535 - Initializing ExecutorService 'applicationTaskExecutor'
+2021-01-13 20:26:31.590 - Adding welcome page: class path resource [static/index.html]
+2021-01-13 20:26:31.646 - Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2021-01-13 20:26:31.647 - [THYMELEAF][restartedMain] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2021-01-13 20:26:32.006 - LiveReload server is running on port 35729
+2021-01-13 20:26:32.009 - Exposing 2 endpoint(s) beneath base path '/list'
+2021-01-13 20:26:32.083 - starting server: Undertow - 2.0.27.Final
+2021-01-13 20:26:32.091 - XNIO version 3.3.8.Final
+2021-01-13 20:26:32.103 - XNIO NIO Implementation Version 3.3.8.Final
+2021-01-13 20:26:32.168 - Undertow started on port(s) 88 (http) with context path '/edu'
+2021-01-13 20:26:32.170 - Started EduApp in 4.262 seconds (JVM running for 5.116)
+2021-01-13 20:26:32.699 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-01-13 20:26:32.700 - Initializing Servlet 'dispatcherServlet'
+2021-01-13 20:26:32.708 - Completed initialization in 8 ms
+2021-01-13 20:28:21.863 - Shutting down ExecutorService 'applicationTaskExecutor'
+2021-01-13 20:28:21.868 - {dataSource-1} closed
+2021-01-13 20:28:21.871 - Destroying Spring FrameworkServlet 'dispatcherServlet'
+2021-01-13 20:28:21.873 - stopping server: Undertow - 2.0.27.Final
+2021-01-13 20:28:22.070 - Starting EduApp on ham with PID 2988 (E:\myproject\java\idea\idea01\edu\target\classes started by ham in E:\myproject\java\idea\idea01\edu)
+2021-01-13 20:28:22.070 - The following profiles are active: dev
+2021-01-13 20:28:22.497 - No MyBatis mapper was found in '[com.edu.mapper]' package. Please check your configuration.
+2021-01-13 20:28:22.545 - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-01-13 20:28:22.638 - UT026010: Buffer pool was not set on WebSocketDeploymentInfo, the default pool will be used
+2021-01-13 20:28:22.640 - Initializing Spring embedded WebApplicationContext
+2021-01-13 20:28:22.640 - Root WebApplicationContext: initialization completed in 566 ms
+2021-01-13 20:28:22.699 - Init DruidDataSource
+2021-01-13 20:28:22.749 - {dataSource-2} inited
+2021-01-13 20:28:22.862 - Initializing ExecutorService 'applicationTaskExecutor'
+2021-01-13 20:28:22.881 - Adding welcome page: class path resource [static/index.html]
+2021-01-13 20:28:22.904 - Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2021-01-13 20:28:22.904 - [THYMELEAF][restartedMain] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2021-01-13 20:28:22.996 - LiveReload server is running on port 35729
+2021-01-13 20:28:22.999 - Exposing 2 endpoint(s) beneath base path '/list'
+2021-01-13 20:28:23.036 - starting server: Undertow - 2.0.27.Final
+2021-01-13 20:28:23.041 - Undertow started on port(s) 88 (http) with context path '/edu'
+2021-01-13 20:28:23.041 - Started EduApp in 1.016 seconds (JVM running for 115.987)
+2021-01-13 20:28:23.042 - Condition evaluation unchanged
+2021-01-13 20:29:51.155 - Shutting down ExecutorService 'applicationTaskExecutor'
+2021-01-13 20:29:51.157 - {dataSource-2} closed
+2021-01-13 20:29:51.160 - stopping server: Undertow - 2.0.27.Final
+2021-01-13 20:29:51.344 - Starting EduApp on ham with PID 2988 (E:\myproject\java\idea\idea01\edu\target\classes started by ham in E:\myproject\java\idea\idea01\edu)
+2021-01-13 20:29:51.344 - The following profiles are active: dev
+2021-01-13 20:29:51.585 - No MyBatis mapper was found in '[com.edu.mapper]' package. Please check your configuration.
+2021-01-13 20:29:51.604 - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-01-13 20:29:51.670 - UT026010: Buffer pool was not set on WebSocketDeploymentInfo, the default pool will be used
+2021-01-13 20:29:51.671 - Initializing Spring embedded WebApplicationContext
+2021-01-13 20:29:51.671 - Root WebApplicationContext: initialization completed in 325 ms
+2021-01-13 20:29:51.698 - Init DruidDataSource
+2021-01-13 20:29:51.729 - {dataSource-3} inited
+2021-01-13 20:29:51.838 - Initializing ExecutorService 'applicationTaskExecutor'
+2021-01-13 20:29:51.858 - Adding welcome page: class path resource [static/index.html]
+2021-01-13 20:29:51.882 - Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2021-01-13 20:29:51.882 - [THYMELEAF][restartedMain] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2021-01-13 20:29:51.969 - LiveReload server is running on port 35729
+2021-01-13 20:29:51.972 - Exposing 2 endpoint(s) beneath base path '/list'
+2021-01-13 20:29:51.999 - starting server: Undertow - 2.0.27.Final
+2021-01-13 20:29:52.004 - Undertow started on port(s) 88 (http) with context path '/edu'
+2021-01-13 20:29:52.004 - Started EduApp in 0.691 seconds (JVM running for 204.951)
+2021-01-13 20:29:52.006 - Condition evaluation unchanged
+2021-01-13 20:30:10.728 - Shutting down ExecutorService 'applicationTaskExecutor'
+2021-01-13 20:30:10.729 - {dataSource-3} closed
+2021-01-13 20:30:10.730 - stopping server: Undertow - 2.0.27.Final
+2021-01-13 20:30:10.889 - Starting EduApp on ham with PID 2988 (E:\myproject\java\idea\idea01\edu\target\classes started by ham in E:\myproject\java\idea\idea01\edu)
+2021-01-13 20:30:10.889 - The following profiles are active: dev
+2021-01-13 20:30:11.125 - No MyBatis mapper was found in '[com.edu.mapper]' package. Please check your configuration.
+2021-01-13 20:30:11.141 - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-01-13 20:30:11.194 - UT026010: Buffer pool was not set on WebSocketDeploymentInfo, the default pool will be used
+2021-01-13 20:30:11.195 - Initializing Spring embedded WebApplicationContext
+2021-01-13 20:30:11.195 - Root WebApplicationContext: initialization completed in 304 ms
+2021-01-13 20:30:11.221 - Init DruidDataSource
+2021-01-13 20:30:11.252 - {dataSource-4} inited
+2021-01-13 20:30:11.319 - Initializing ExecutorService 'applicationTaskExecutor'
+2021-01-13 20:30:11.333 - Adding welcome page: class path resource [static/index.html]
+2021-01-13 20:30:11.351 - Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2021-01-13 20:30:11.351 - [THYMELEAF][restartedMain] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2021-01-13 20:30:11.437 - LiveReload server is running on port 35729
+2021-01-13 20:30:11.440 - Exposing 2 endpoint(s) beneath base path '/list'
+2021-01-13 20:30:11.470 - starting server: Undertow - 2.0.27.Final
+2021-01-13 20:30:11.480 - Undertow started on port(s) 88 (http) with context path '/edu'
+2021-01-13 20:30:11.480 - Started EduApp in 0.621 seconds (JVM running for 224.426)
+2021-01-13 20:30:11.482 - Condition evaluation unchanged
+2021-01-13 20:30:55.054 - Shutting down ExecutorService 'applicationTaskExecutor'
+2021-01-13 20:30:55.056 - {dataSource-4} closed
+2021-01-13 20:30:55.061 - stopping server: Undertow - 2.0.27.Final
+2021-01-13 20:30:55.246 - Starting EduApp on ham with PID 2988 (E:\myproject\java\idea\idea01\edu\target\classes started by ham in E:\myproject\java\idea\idea01\edu)
+2021-01-13 20:30:55.247 - The following profiles are active: dev
+2021-01-13 20:30:55.521 - No MyBatis mapper was found in '[com.edu.mapper]' package. Please check your configuration.
+2021-01-13 20:30:55.534 - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-01-13 20:30:55.589 - UT026010: Buffer pool was not set on WebSocketDeploymentInfo, the default pool will be used
+2021-01-13 20:30:55.590 - Initializing Spring embedded WebApplicationContext
+2021-01-13 20:30:55.590 - Root WebApplicationContext: initialization completed in 341 ms
+2021-01-13 20:30:55.617 - Init DruidDataSource
+2021-01-13 20:30:55.650 - {dataSource-5} inited
+2021-01-13 20:30:55.711 - Initializing ExecutorService 'applicationTaskExecutor'
+2021-01-13 20:30:55.723 - Adding welcome page: class path resource [static/index.html]
+2021-01-13 20:30:55.742 - [THYMELEAF][restartedMain] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2021-01-13 20:30:55.840 - LiveReload server is running on port 35729
+2021-01-13 20:30:55.842 - Exposing 2 endpoint(s) beneath base path '/list'
+2021-01-13 20:30:55.870 - starting server: Undertow - 2.0.27.Final
+2021-01-13 20:30:55.874 - Undertow started on port(s) 88 (http) with context path '/edu'
+2021-01-13 20:30:55.875 - Started EduApp in 0.667 seconds (JVM running for 268.821)
+2021-01-13 20:30:55.876 - Condition evaluation unchanged
+2021-01-13 20:58:30.341 - Starting EduApp on ham with PID 4144 (E:\myproject\java\idea\idea01\edu\target\classes started by ham in E:\myproject\java\idea\idea01\edu)
+2021-01-13 20:58:30.343 - The following profiles are active: dev
+2021-01-13 20:58:30.385 - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-01-13 20:58:30.385 - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-01-13 20:58:31.364 - No MyBatis mapper was found in '[com.edu.mapper]' package. Please check your configuration.
+2021-01-13 20:58:31.543 - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-01-13 20:58:31.858 - UT026010: Buffer pool was not set on WebSocketDeploymentInfo, the default pool will be used
+2021-01-13 20:58:31.893 - Initializing Spring embedded WebApplicationContext
+2021-01-13 20:58:31.894 - Root WebApplicationContext: initialization completed in 1509 ms
+2021-01-13 20:58:32.027 - Init DruidDataSource
+2021-01-13 20:58:32.206 - {dataSource-1} inited
+2021-01-13 20:58:32.632 - Initializing ExecutorService 'applicationTaskExecutor'
+2021-01-13 20:58:32.697 - Adding welcome page: class path resource [static/index.html]
+2021-01-13 20:58:32.759 - [THYMELEAF][restartedMain] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2021-01-13 20:58:33.104 - LiveReload server is running on port 35729
+2021-01-13 20:58:33.108 - Exposing 2 endpoint(s) beneath base path '/list'
+2021-01-13 20:58:33.184 - starting server: Undertow - 2.0.27.Final
+2021-01-13 20:58:33.193 - XNIO version 3.3.8.Final
+2021-01-13 20:58:33.210 - XNIO NIO Implementation Version 3.3.8.Final
+2021-01-13 20:58:33.277 - Undertow started on port(s) 88 (http) with context path '/edu'
+2021-01-13 20:58:33.279 - Started EduApp in 3.558 seconds (JVM running for 5.059)
+2021-01-13 20:58:33.513 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-01-13 20:58:33.513 - Initializing Servlet 'dispatcherServlet'
+2021-01-13 20:58:33.517 - Completed initialization in 4 ms
+2021-01-13 21:00:42.476 - Shutting down ExecutorService 'applicationTaskExecutor'
+2021-01-13 21:00:42.486 - {dataSource-1} closed
+2021-01-13 21:00:42.491 - Destroying Spring FrameworkServlet 'dispatcherServlet'
+2021-01-13 21:00:42.496 - stopping server: Undertow - 2.0.27.Final
+2021-01-13 21:00:42.787 - Starting EduApp on ham with PID 4144 (E:\myproject\java\idea\idea01\edu\target\classes started by ham in E:\myproject\java\idea\idea01\edu)
+2021-01-13 21:00:42.787 - The following profiles are active: dev
+2021-01-13 21:00:43.256 - No MyBatis mapper was found in '[com.edu.mapper]' package. Please check your configuration.
+2021-01-13 21:00:43.317 - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-01-13 21:00:43.435 - UT026010: Buffer pool was not set on WebSocketDeploymentInfo, the default pool will be used
+2021-01-13 21:00:43.436 - Initializing Spring embedded WebApplicationContext
+2021-01-13 21:00:43.436 - Root WebApplicationContext: initialization completed in 639 ms
+2021-01-13 21:00:43.482 - Init DruidDataSource
+2021-01-13 21:00:43.521 - {dataSource-2} inited
+2021-01-13 21:00:43.607 - Initializing ExecutorService 'applicationTaskExecutor'
+2021-01-13 21:00:43.626 - Adding welcome page: class path resource [static/index.html]
+2021-01-13 21:00:43.648 - [THYMELEAF][restartedMain] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2021-01-13 21:00:43.762 - LiveReload server is running on port 35729
+2021-01-13 21:00:43.766 - Exposing 2 endpoint(s) beneath base path '/list'
+2021-01-13 21:00:43.804 - starting server: Undertow - 2.0.27.Final
+2021-01-13 21:00:43.809 - Undertow started on port(s) 88 (http) with context path '/edu'
+2021-01-13 21:00:43.810 - Started EduApp in 1.117 seconds (JVM running for 135.589)
+2021-01-13 21:00:43.812 - Condition evaluation unchanged
+2021-01-13 21:00:43.943 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-01-13 21:00:43.944 - Initializing Servlet 'dispatcherServlet'
+2021-01-13 21:00:43.948 - Completed initialization in 4 ms
+2021-01-13 23:31:06.183 - Shutting down ExecutorService 'applicationTaskExecutor'
+2021-01-13 23:31:06.187 - {dataSource-2} closed
+2021-01-13 23:31:06.191 - Destroying Spring FrameworkServlet 'dispatcherServlet'
+2021-01-13 23:31:06.195 - stopping server: Undertow - 2.0.27.Final
