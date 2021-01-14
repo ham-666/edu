@@ -207,7 +207,6 @@
 .tabs-header-right .tabs {
   height: 100%;
   padding: 4px 2px 0 0;
-  border-width: 0 0 0 1px;
 }
 .tabs-header-left .tabs li,
 .tabs-header-right .tabs li {
