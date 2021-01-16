@@ -1,0 +1,217 @@
+# 创建数据库
+drop database if exists edu;
+create database edu default charset=utf8mb4;
+# 使用数据库
+use edu;
+# 创建角色表
+drop table if exists sys_role;
+create table sys_role(
+	role_id varchar(2) primary key comment '角色id',
+	role_name varchar(16) not null comment '角色名称'
+)engine=innodb default charset=utf8mb4 comment '角色表';
+
+#创建菜单
+drop table if exists sys_menu;
+create table sys_menu(
+	menu_id	varchar(4) primary key comment '菜单id',
+	menu_name varchar(32) not null comment '菜单名称',
+	parent_menu_id	varchar(4) not null default 0 comment '父菜单id',
+	icon varchar(16) comment '菜单图标',	
+	menu_url varchar(128) not null default '#' comment '菜单链接地址',
+	menu_level	tinyint(2) not null default 0 comment '菜单级别',
+	menu_sort	tinyint(2) not null default 0 comment '菜单顺序',
+	active tinyint(2) default 0 comment '激活标志符:0-未激活(默认)，1-已激活'
+)engine=innodb default charset=utf8mb4 comment '菜单表';
+
+#创建角色菜单
+drop table if exists sys_role_menu;
+create table sys_role_menu(
+	role_id varchar(2) not null comment '角色id',
+	menu_id	varchar(4)  not null comment '菜单id',
+	active tinyint(2) default 0 comment '激活标志符:0-未激活(默认)，1-已激活',
+	foreign key(role_id) references sys_role(role_id),
+	foreign key(menu_id) references sys_menu(menu_id)
+)engine=innodb default charset=utf8mb4 comment '角色菜单表';
+
+#创建按钮
+drop table if exists sys_button;
+create table sys_button(
+	btn_id varchar(8) primary key comment '按钮id',
+	btn_name varchar(32) not null comment '按钮名称'
+)engine=innodb default charset=utf8mb4 comment '按钮表';
+
+#创建角色按钮
+drop table if exists sys_role_button;
+create table sys_role_button(
+	role_id varchar(2) not null comment '角色id',
+	btn_id	varchar(8) not null comment '菜单id',
+	active tinyint(2) default 0 comment '激活标志符:0-未激活(默认)，1-已激活',
+	foreign key(role_id) references sys_role(role_id),
+	foreign key(btn_id) references sys_button(btn_id)
+)engine=innodb default charset=utf8mb4 comment '角色按钮表';
+
+# 创建用户
+drop table if exists sys_user;
+create table sys_user(
+	user_no	varchar(8) unique not null comment '用户编号',
+	password varchar(64)	not null comment '用户密码',
+	username varchar(32)	not null comment '姓名',
+	icon_no varchar(16)	not null default '' comment '用户图标',
+	role_id varchar(2) not null comment '角色id',
+	is_delete tinyint(2) default 0 comment '删除标志符:0-未删除(默认)，1-删除',
+	create_time timestamp default current_timestamp comment '创建时间',
+	create_by varchar(16) not null comment '创建人',
+	foreign key(role_id) references sys_role(role_id)
+)engine=innodb default charset=utf8mb4 comment '系统用户表';
+
+# 用户详情表
+drop table if exists user_detail;
+create table user_detail(
+	user_no	varchar(8) unique not null comment '用户编号',
+	sex  tinyint(2) default '2' comment '性别,0-女,1-男,2-未知',
+	age int(4) comment '年龄',
+	address varchar(128) comment '住址',
+	birthday varchar(32) comment '生日', 
+	phone varchar(16) comment '手机号',
+	qq varchar(16) comment 'QQ号',
+	wx varchar(16) comment '微信号',
+	email varchar(16) comment '邮箱'
+)engine=innodb default charset=utf8mb4 comment '用户详情表';
+
+# 影像文件表
+drop table if exists image_path;
+create table image_path(
+	image_no varchar(8) primary key comment '影像文件编号',
+	image_name varchar(16) not null comment '影像文件名称',
+	image_type varchar(2) not null comment '影像文件类型:01-图标,02-图片',
+	image_path varchar(64) not null comment '影像文件路径',
+	available tinyint(1) default 0 comment '是否可用:0-不可用,1-可用'
+)engine=innodb default charset=utf8mb4 comment '影像文件表';
+
+# 创建删除表
+drop table if exists sys_delete;
+create table sys_delete(
+	delete_id int(16) primary key auto_increment comment '删除id',
+	table_name varchar(32) not null comment '删除表名',
+	table_id int(16) not null comment '表唯一id(用于删除标识)',
+	delete_desc varchar(64) not null comment '描述',
+	delete_time timestamp default current_timestamp comment '删除时间',
+	create_by varchar(16) not null comment '删除人'
+)engine=innodb default charset=utf8mb4 comment '删除表';
+
+# 操作日志信息表
+drop table if exists sys_operate_log;
+create table sys_operate_log(
+	operate_log_id int(16) primary key auto_increment comment '操作日志id',
+	operate_desc varchar(512) comment '操作描述',
+	operate_time timestamp default current_timestamp comment '操作时间',
+	operate_by varchar(8) not null comment '操作人'
+)engine=innodb default charset=utf8mb4 comment '操作日志信息表';
+
+# 登陆日志信息表
+drop table if exists sys_login_log;
+create table sys_login_log(
+	login_log_id int(16) primary key auto_increment comment '操作日志id',
+	login_log_type varchar(2) comment '登陆类型(0-登入，1-登出)',
+	login_time timestamp default current_timestamp comment '操作时间',
+	login_by varchar(8) not null comment '操作人'
+)engine=innodb default charset=utf8mb4 comment '登陆日志信息表';
+
+# id信息表(负责管理业务操作增加时的主键信息)
+drop table if exists sys_ids;
+create table sys_ids(
+	id varchar(2) primary key comment '需要自增管理的id编号',
+	title varchar(16) not null comment 'id描述',
+	base_id varchar(8) not null comment '基础id',
+	increat_id int(4) not null comment '增加id',
+	last_id varchar(16) not null comment '上次id'
+)engine=innodb default charset=utf8mb4 comment 'id信息表';
+
+# 年级表
+drop table if exists sys_grade;
+create table sys_grade(
+	sys_grade_id varchar(2) primary key comment '年级id',
+	title varchar(16) not null comment '年级名称',
+	grade_type varchar(2) not null comment '年级类型:01-小学、02-初中、03-高中'
+)engine=innodb default charset=utf8mb4 comment '年级表';
+
+# 班级表
+drop table if exists class;
+create table sys_class(
+	class_id varchar(2) primary key comment '班级id',
+	title varchar(16) not null comment '班级名称',
+	headmaster varchar(8) not null comment '班主任',
+	foreign key(headmaster) references sys_user(user_no)
+)engine=innodb default charset=utf8mb4 comment '班级表';
+
+# 教室表
+drop table if exists class_room;
+create table class_room(
+	class_room_id varchar(2) primary key comment '教室id',
+	class_room_name varchar(16) not null comment '教室名称',
+	class_room_address varchar(32) not null comment '教室地址',
+	scale int(4) not null comment '班级规模(班级可以容纳的人数)'
+)engine=innodb default charset=utf8mb4 comment '教室表';
+
+# 年级班级表
+drop table if exists sys_grade_class;
+create table sys_grade_class(
+	sys_grade_id varchar(2) comment '年级id',
+	class_id varchar(2) comment '班级id',
+	class_room_id varchar(2) not null comment '教室id',
+	foreign key(class_room_id) references class_room(class_room_id),
+	primary key(sys_grade_id, class_id)
+)engine=innodb default charset=utf8mb4 comment '班级表';
+
+# 课程表
+drop table if exists sys_crouse;
+create table sys_crouse(
+	crouse_id varchar(2) primary key comment '课程id',
+	title varchar(16) not null comment '课程名称'
+)engine=innodb default charset=utf8mb4 comment '课程表';
+
+# 年级课程表
+drop table if exists sys_grade_crouse;
+create table sys_grade_crouse(
+	sys_grade_id varchar(2) primary key comment '年级id',
+	crouse_id varchar(2) primary key comment '课程id',
+	score int(4) default 100 comment '成绩',
+	credit int(2) default 2 comment '学分',
+	primary key(sys_grade_id, crouse_id)
+)engine=innodb default charset=utf8mb4 comment '年级课程表';
+
+# 学校信息表
+drop table if exists school_info;
+create table school_info(
+	school_name varchar(2) primary key comment '学校名称',
+	school_log_path varchar(128) not null comment '学校log',
+	school_introduction varchar(256) comment '学校简介',
+	school_create_date varchar(16) comment '学校成立时间',
+	school_phone1  varchar(16) comment '学校联系电话1',
+	school_phone2  varchar(16) comment '学校联系电话2'
+)engine=innodb default charset=utf8mb4 comment '学校信息表';
+
+# 初始化信息
+# =================================================================
+# 初始化角色信息
+insert into sys_role(role_id, role_name) values('01', '超级管理员');
+insert into sys_role(role_id, role_name) values('02', '管理员');
+insert into sys_role(role_id, role_name) values('03', '管理员助理');
+insert into sys_role(role_id, role_name) values('04', '教师');
+insert into sys_role(role_id, role_name) values('05', '学生');
+# 初始化超级管理员信息
+insert into sys_user(user_no, username, password, role_id, create_by) values('0001', 'root', '22dec613ac97690c1fc310a3e495b1fc61ebeff3', '01', '0000');
+insert into sys_user(user_no, username, password, role_id, create_by) values('0002', 'admin', '3c39afa93e0b12c28f1f08b18488ebd4ad2e5858', '01', '0000');
+#初始化年级信息表
+insert into sys_grade(sys_grade_id,title,grade_type) value('01','小学一年级','01');
+insert into sys_grade(sys_grade_id,title,grade_type) value('02','小学二年级','01');
+insert into sys_grade(sys_grade_id,title,grade_type) value('03','小学三年级','01');
+insert into sys_grade(sys_grade_id,title,grade_type) value('04','小学四年级','01');
+insert into sys_grade(sys_grade_id,title,grade_type) value('05','小学五年级','01');
+insert into sys_grade(sys_grade_id,title,grade_type) value('06','小学六年级','01');
+insert into sys_grade(sys_grade_id,title,grade_type) value('07','初中一年级','02');
+insert into sys_grade(sys_grade_id,title,grade_type) value('08','初中二年级','02');
+insert into sys_grade(sys_grade_id,title,grade_type) value('09','初中三年级','02');
+insert into sys_grade(sys_grade_id,title,grade_type) value('10','高中一年级','03');
+insert into sys_grade(sys_grade_id,title,grade_type) value('11','高中二年级','03');
+insert into sys_grade(sys_grade_id,title,grade_type) value('12','高中三年级','03');
